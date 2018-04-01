@@ -50,6 +50,8 @@ int main(int argc, char** argv){
 						break;
 					default:
 						printf("WIZARDRY");
+
+						endwin();
 						return -1;
 						break;
 				}
@@ -63,6 +65,8 @@ int main(int argc, char** argv){
 		input = getch();
 		running = input == 'q' ? 0 : 1;
 	}
+
+	endwin();
 
 	return 0;
 
