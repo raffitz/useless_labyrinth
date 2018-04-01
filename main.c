@@ -2,6 +2,7 @@
 #include <locale.h>
 #include <curses.h>
 #include <stdlib.h>
+#include <time.h>
 
 #define MAX_BUFFER_SIZE 65536
 
@@ -12,6 +13,8 @@ int main(int argc, char** argv){
 	int i,j;
 
 	int input;
+
+	unsigned int seed;
 
 	int random;
 
@@ -33,6 +36,10 @@ int main(int argc, char** argv){
 	keypad(stdscr, TRUE);
 
 	/* Execution */
+
+	seed = time(NULL);
+
+	srand(seed);
 
 	getmaxyx(stdscr,height,width);
 
